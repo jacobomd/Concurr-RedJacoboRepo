@@ -14,7 +14,7 @@ import Foundation
 
 struct SingleTopicResponse: Codable {
     
-    let postStream: PostStream
+   // let postStream: PostStream
     
     let timelineLookup: [[Int]]
     
@@ -90,7 +90,7 @@ struct SingleTopicResponse: Codable {
     
     enum CodingKeys: String, CodingKey {
         
-        case postStream = "post_stream"
+      //  case postStream = "post_stream"
         
         case timelineLookup = "timeline_lookup"
         

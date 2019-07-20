@@ -31,8 +31,10 @@ class TopicsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 60
+        self.title = "Topics"
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
+        let cell = UINib(nibName: "TopicCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: UITableViewCell.identifier)
         
         viewModel.viewDidLoad()
     }
@@ -44,8 +46,17 @@ extension TopicsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
-        cell.textLabel?.text = topics[indexPath.row].title
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
+            as? TopicCell else {
+                return UITableViewCell()
+        }
+        
+        let title = topics[indexPath.row].title
+        let numVisitas = topics[indexPath.row].views
+        
+        
+        cell.configure(title: title, numVisitas: "Numero de visitas : \(numVisitas)")
+        
         return cell
     }
 }

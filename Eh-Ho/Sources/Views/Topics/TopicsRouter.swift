@@ -26,8 +26,8 @@ class TopicsRouter {
         return viewController
     }
     
-    func navigateToTopicDetail(id: Int) {
-        let viewControllerToPush = DetailTopicRouter.configureModule(id: id)
+    func navigateToPosts(id: Int) {
+        let viewControllerToPush = PostRouter.configureModule(id: id)
         viewController?.navigationController?.pushViewController(viewControllerToPush, animated: true)
     }
 }

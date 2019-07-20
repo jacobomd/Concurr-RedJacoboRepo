@@ -30,6 +30,7 @@ class CategoriesViewController: UIViewController {
         categoriesTable.delegate = self
         categoriesTable.dataSource = self
         categoriesTable.rowHeight = 60
+        self.title = "Categories"
         
         categoriesTable.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         

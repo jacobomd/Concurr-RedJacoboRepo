@@ -26,7 +26,7 @@ class TopicsViewModel {
     }
     
     func didTapInTopic(id: Int) {
-        router.navigateToTopicDetail(id: id)
+        router.navigateToPosts(id: id)
     }
     
     private func fetchListTopicsByCategory() {

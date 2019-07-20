@@ -66,7 +66,7 @@ struct Topic: Codable {
     let categoryID: Int
     let pinnedGlobally: Bool
 //    let featuredLink: JSONNull?
-    let posters: [Poster]
+ //   let posters: [Poster]
     
     enum CodingKeys: String, CodingKey {
         case id, title
@@ -89,23 +89,23 @@ struct Topic: Codable {
         case categoryID = "category_id"
         case pinnedGlobally = "pinned_globally"
   //      case featuredLink = "featured_link"
-        case posters
+    //    case posters
     }
 }
 
 // MARK: - Poster
-struct Poster: Codable {
-    let extras, posterDescription: String
-    let userID: Int
-  //  let primaryGroupID: JSONNull?
-    
-    enum CodingKeys: String, CodingKey {
-        case extras
-        case posterDescription = "description"
-        case userID = "user_id"
- //       case primaryGroupID = "primary_group_id"
-    }
-}
+//struct Poster: Codable {
+//    let extras, posterDescription: String
+//    let userID: Int
+//  //  let primaryGroupID: JSONNull?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case extras
+//        case posterDescription = "description"
+//        case userID = "user_id"
+// //       case primaryGroupID = "primary_group_id"
+//    }
+//}
 
 // MARK: - User
 struct User: Codable {

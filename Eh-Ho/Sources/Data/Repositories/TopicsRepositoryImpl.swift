@@ -30,11 +30,5 @@ class TopicsRepositoryImpl: TopicsRepository {
             completion(result)
         }
     }
-    
-//    func getLatestTopics(completion: @escaping (Result<LatestTopicsResponse, Error>) -> ()) {
-//        let request = LatestTopicsRequest()
-//        session.send(request: request) { result in
-//            completion(result)
-//        }
-//    }
+
 }
