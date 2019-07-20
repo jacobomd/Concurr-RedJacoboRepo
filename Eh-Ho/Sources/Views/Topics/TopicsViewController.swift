@@ -59,12 +59,12 @@ extension TopicsViewController: UITableViewDelegate {
 
 // MARK: - ViewModel Communication
 protocol TopicsViewControllerProtocol: class {
-    func showLatestTopics(topics: [Topic])
+    func showListTopicsByCategory(topics: [Topic])
     func showError(with message: String)
 }
 
 extension TopicsViewController: TopicsViewControllerProtocol {
-    func showLatestTopics(topics: [Topic]) {
+    func showListTopicsByCategory(topics: [Topic]) {
         self.topics = topics
         self.tableView.reloadData()
     }

@@ -10,5 +10,5 @@ import Foundation
 
 protocol TopicsRepository {
     func getSingleTopicById(id: Int, completion: @escaping(Result<SingleTopicResponse, Error>) -> ())
-    func getLatestTopics(completion: @escaping(Result<LatestTopicsResponse, Error>) -> ())
+    func getListTopicsByCategory(id: Int, completion: @escaping(Result<ListTopicsByCategoryResponse, Error>) -> ())
 }

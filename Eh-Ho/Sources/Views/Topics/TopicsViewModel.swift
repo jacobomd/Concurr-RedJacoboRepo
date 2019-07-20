@@ -12,30 +12,32 @@ class TopicsViewModel {
     
     weak var view: TopicsViewControllerProtocol?
     let router: TopicsRouter
+    let id: Int
     let topicsRepository: TopicsRepository
     
-    init(router: TopicsRouter,
-         topicsRepository: TopicsRepository) {
+    init(router: TopicsRouter, topicsRepository: TopicsRepository, id: Int) {
         self.router = router
         self.topicsRepository = topicsRepository
+        self.id = id
     }
     
     func viewDidLoad() {
-        fetchLatestTopics()
+       fetchListTopicsByCategory()
     }
     
     func didTapInTopic(id: Int) {
         router.navigateToTopicDetail(id: id)
     }
     
-    private func fetchLatestTopics() {
-        topicsRepository.getLatestTopics { [weak self] result in
-            switch result {
-            case .success(let value):
-                self?.view?.showLatestTopics(topics: value.topicList.topics)
-            case .failure:
+    private func fetchListTopicsByCategory() {
+       topicsRepository.getListTopicsByCategory(id: id) { [weak self] result in
+           switch result {
+           case .success(let value):
+              self?.view?.showListTopicsByCategory(topics: value.topicList.topics)
+            print("llega el valor")
+          case .failure:
                 self?.view?.showError(with: "Error")
-            }
+           }
         }
     }
 }

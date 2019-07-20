@@ -56,7 +56,8 @@ extension CategoriesViewController: UITableViewDataSource{
 
 extension CategoriesViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let id = categories[indexPath.row].id
+        viewModel.didTapInCategory(id: id)
     }
 }
 

@@ -1,78 +1,75 @@
+//
+//  ListTopicsByCategoryResponse.swift
+//  Eh-Ho
+//
+//  Created by Jacobo Morales Diaz on 20/07/2019.
+//  Copyright © 2019 KeepCoding. All rights reserved.
+//
+
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
+
 import Foundation
 
-// MARK: - LatestTopicsResponse
-
-struct LatestTopicsResponse: Codable {
-    
+// MARK: - Welcome
+struct ListTopicsByCategoryResponse: Codable {
     let users: [User]
+ //   let primaryGroups: [JSONAny]
     let topicList: TopicList
     
     enum CodingKeys: String, CodingKey {
         case users
+   //     case primaryGroups = "primary_groups"
         case topicList = "topic_list"
     }
 }
 
 // MARK: - TopicList
-
 struct TopicList: Codable {
-    
     let canCreateTopic: Bool
+//    let draft: JSONNull?
     let draftKey: String
-    let draftSequence: Int
+//    let draftSequence: JSONNull?
     let perPage: Int
     let topics: [Topic]
     
     enum CodingKeys: String, CodingKey {
         case canCreateTopic = "can_create_topic"
+ //       case draft
         case draftKey = "draft_key"
-        case draftSequence = "draft_sequence"
+//        case draftSequence = "draft_sequence"
         case perPage = "per_page"
         case topics
     }
 }
 
 // MARK: - Topic
-
 struct Topic: Codable {
-    
     let id: Int
-    let title: String
-    let fancyTitle: String
-    let slug: String
-    let postsCount: Int
-    let replyCount: Int
-    let highestPostNumber: Int
+    let title, fancyTitle, slug: String
+    let postsCount, replyCount, highestPostNumber: Int
     let imageURL: String?
-    let createdAt: String
-    let lastPostedAt: String
+    let createdAt: String?
+    let lastPostedAt: String?
     let bumped: Bool
-    let bumpedAt: String
-    let unseen: Bool
-    let lastReadPostNumber: Int?
-    let unread: Int?
-    let newPosts: Int?
-    let pinned: Bool
-    let unpinned: Bool?
-    let visible: Bool
-    let closed: Bool
-    let archived: Bool
-    let notificationLevel: Int?
-    let bookmarked: Bool?
-    let liked: Bool?
-    let views: Int
-    let likeCount: Int
+    let bumpedAt: String?
+    let unseen, pinned: Bool
+ //   let unpinned: JSONNull?
+    let excerpt: String?
+    let visible, closed, archived: Bool
+//    let bookmarked, liked: JSONNull?
+    let views, likeCount: Int
     let hasSummary: Bool
-    let archetype: String
-    let lastPosterUsername: String?
+    let archetype, lastPosterUsername: String?
     let categoryID: Int
     let pinnedGlobally: Bool
-    let bookmarkedPostNumbers: [Int]?
+//    let featuredLink: JSONNull?
     let posters: [Poster]
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case title
+        case id, title
         case fancyTitle = "fancy_title"
         case slug
         case postsCount = "posts_count"
@@ -83,55 +80,43 @@ struct Topic: Codable {
         case lastPostedAt = "last_posted_at"
         case bumped
         case bumpedAt = "bumped_at"
-        case unseen
-        case lastReadPostNumber = "last_read_post_number"
-        case unread
-        case newPosts = "new_posts"
-        case pinned
-        case unpinned
-        case visible
-        case closed
-        case archived
-        case notificationLevel = "notification_level"
-        case bookmarked
-        case liked
-        case views
+ //       case unseen, pinned, unpinned, excerpt, visible, closed, archived, bookmarked, liked, views
+        case unseen, pinned, excerpt, visible, closed, archived, views
         case likeCount = "like_count"
         case hasSummary = "has_summary"
         case archetype
         case lastPosterUsername = "last_poster_username"
         case categoryID = "category_id"
         case pinnedGlobally = "pinned_globally"
-        case bookmarkedPostNumbers = "bookmarked_post_numbers"
+  //      case featuredLink = "featured_link"
         case posters
     }
 }
 
 // MARK: - Poster
-
 struct Poster: Codable {
-    let extras: String
-    let posterDescription: String
+    let extras, posterDescription: String
     let userID: Int
+  //  let primaryGroupID: JSONNull?
     
     enum CodingKeys: String, CodingKey {
         case extras
         case posterDescription = "description"
         case userID = "user_id"
+ //       case primaryGroupID = "primary_group_id"
     }
 }
 
 // MARK: - User
 struct User: Codable {
     let id: Int
-    let username: String
-    let name: String
-    let avatarTemplate: String
+    let username, name, avatarTemplate: String
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case username
-        case name
+        case id, username, name
         case avatarTemplate = "avatar_template"
     }
 }
+
+
+

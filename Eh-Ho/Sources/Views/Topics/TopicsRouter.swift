@@ -12,12 +12,12 @@ class TopicsRouter {
     
     weak var viewController: UIViewController?
     
-    static func configureModule() -> UIViewController {
+    static func configureModule(id: Int) -> UIViewController {
         
         let router = TopicsRouter()
         let sessionApi = SessionAPI()
         let topicsRepository = TopicsRepositoryImpl(session: sessionApi)
-        let viewModel = TopicsViewModel(router: router, topicsRepository: topicsRepository)
+        let viewModel = TopicsViewModel(router: router, topicsRepository: topicsRepository, id: id)
         let viewController = TopicsViewController(topicsViewModel: viewModel)
         
         viewModel.view = viewController

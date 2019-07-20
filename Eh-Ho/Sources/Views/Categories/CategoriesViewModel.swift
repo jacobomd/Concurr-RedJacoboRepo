@@ -24,6 +24,10 @@ class CategoriesViewModel {
         fetchListCategories()
     }
     
+    func didTapInCategory(id: Int) {
+        router.navigateToTopicsById(id: id)
+    }
+    
     private func fetchListCategories() {
         categoriesRepository.getListCategories { [weak self] result  in
             switch result {
@@ -35,15 +39,6 @@ class CategoriesViewModel {
         }
     }
     
-//    private func fetchLatestTopics() {
-//        topicsRepository.getLatestTopics { [weak self] result in
-//            switch result {
-//            case .success(let value):
-//                self?.view?.showLatestTopics(topics: value.topicList.topics)
-//            case .failure:
-//                self?.view?.showError(with: "Error")
-//            }
-//        }
-//    }
+
     
 }

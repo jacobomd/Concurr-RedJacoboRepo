@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		113BFD4A22E26650003D3CA8 /* ListCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113BFD4922E26650003D3CA8 /* ListCategoriesRequest.swift */; };
+		118EF0E222E311AF00F57FA2 /* ListTopicsByCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EF0E122E311AF00F57FA2 /* ListTopicsByCategoryResponse.swift */; };
+		118EF0E422E312F300F57FA2 /* ListTopicsByCategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EF0E322E312F300F57FA2 /* ListTopicsByCategoryRequest.swift */; };
 		11E55FAA22E23163008FD871 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E55FA822E23163008FD871 /* CategoriesViewController.swift */; };
 		11E55FAB22E23163008FD871 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E55FA922E23163008FD871 /* CategoriesViewController.xib */; };
 		11E55FAD22E23187008FD871 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E55FAC22E23187008FD871 /* CategoriesViewModel.swift */; };
@@ -23,12 +25,10 @@
 		742A18B822DE5540004C544D /* TopicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742A18B622DE5540004C544D /* TopicsViewController.xib */; };
 		742A18BC22DE581F004C544D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18BB22DE581F004C544D /* APIRequest.swift */; };
 		742A18BE22DE620C004C544D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18BD22DE620C004C544D /* APIClient.swift */; };
-		742A18C122DE649F004C544D /* LatestTopicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18C022DE649F004C544D /* LatestTopicsRequest.swift */; };
 		742A18C422DE694E004C544D /* TopicsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18C322DE694E004C544D /* TopicsRepository.swift */; };
 		742A18C622DE6999004C544D /* TopicsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18C522DE6999004C544D /* TopicsRepositoryImpl.swift */; };
 		742A18C822DE6F23004C544D /* TopicsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18C722DE6F23004C544D /* TopicsRouter.swift */; };
 		742A18CA22DE6F37004C544D /* TopicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18C922DE6F37004C544D /* TopicsViewModel.swift */; };
-		742A18CD22DE74B8004C544D /* LatestTopicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18CC22DE74B8004C544D /* LatestTopicsResponse.swift */; };
 		742A18D022DE789D004C544D /* UITableViewCellExten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18CF22DE789D004C544D /* UITableViewCellExten.swift */; };
 		742A18D422DE7C47004C544D /* DetailTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18D222DE7C47004C544D /* DetailTopicViewController.swift */; };
 		742A18D522DE7C47004C544D /* DetailTopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742A18D322DE7C47004C544D /* DetailTopicViewController.xib */; };
@@ -42,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		113BFD4922E26650003D3CA8 /* ListCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCategoriesRequest.swift; sourceTree = "<group>"; };
+		118EF0E122E311AF00F57FA2 /* ListTopicsByCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTopicsByCategoryResponse.swift; sourceTree = "<group>"; };
+		118EF0E322E312F300F57FA2 /* ListTopicsByCategoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTopicsByCategoryRequest.swift; sourceTree = "<group>"; };
 		11E55FA822E23163008FD871 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		11E55FA922E23163008FD871 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		11E55FAC22E23187008FD871 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -59,12 +61,10 @@
 		742A18B622DE5540004C544D /* TopicsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsViewController.xib; sourceTree = "<group>"; };
 		742A18BB22DE581F004C544D /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		742A18BD22DE620C004C544D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		742A18C022DE649F004C544D /* LatestTopicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTopicsRequest.swift; sourceTree = "<group>"; };
 		742A18C322DE694E004C544D /* TopicsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsRepository.swift; sourceTree = "<group>"; };
 		742A18C522DE6999004C544D /* TopicsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsRepositoryImpl.swift; sourceTree = "<group>"; };
 		742A18C722DE6F23004C544D /* TopicsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsRouter.swift; sourceTree = "<group>"; };
 		742A18C922DE6F37004C544D /* TopicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewModel.swift; sourceTree = "<group>"; };
-		742A18CC22DE74B8004C544D /* LatestTopicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTopicsResponse.swift; sourceTree = "<group>"; };
 		742A18CF22DE789D004C544D /* UITableViewCellExten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExten.swift; sourceTree = "<group>"; };
 		742A18D222DE7C47004C544D /* DetailTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTopicViewController.swift; sourceTree = "<group>"; };
 		742A18D322DE7C47004C544D /* DetailTopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTopicViewController.xib; sourceTree = "<group>"; };
@@ -221,10 +221,10 @@
 			isa = PBXGroup;
 			children = (
 				742A18CB22DE74A5004C544D /* Responses */,
-				742A18C022DE649F004C544D /* LatestTopicsRequest.swift */,
 				742A18DC22DE81ED004C544D /* SingleTopicRequest.swift */,
 				742A18DE22DE8526004C544D /* CreateTopicRequest.swift */,
 				113BFD4922E26650003D3CA8 /* ListCategoriesRequest.swift */,
+				118EF0E322E312F300F57FA2 /* ListTopicsByCategoryRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,10 +243,10 @@
 		742A18CB22DE74A5004C544D /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				742A18CC22DE74B8004C544D /* LatestTopicsResponse.swift */,
 				742A18DA22DE8136004C544D /* SingleTopicResponse.swift */,
 				742A18E022DE858A004C544D /* AddNewTopicResponse.swift */,
 				11E55FB422E2606E008FD871 /* ListCategoriesResponse.swift */,
+				118EF0E122E311AF00F57FA2 /* ListTopicsByCategoryResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -343,15 +343,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742A18C122DE649F004C544D /* LatestTopicsRequest.swift in Sources */,
 				742A189A22DE5309004C544D /* AppDelegate.swift in Sources */,
-				742A18CD22DE74B8004C544D /* LatestTopicsResponse.swift in Sources */,
 				742A18C422DE694E004C544D /* TopicsRepository.swift in Sources */,
 				742A18DB22DE8136004C544D /* SingleTopicResponse.swift in Sources */,
 				742A18D422DE7C47004C544D /* DetailTopicViewController.swift in Sources */,
 				742A18C822DE6F23004C544D /* TopicsRouter.swift in Sources */,
+				118EF0E222E311AF00F57FA2 /* ListTopicsByCategoryResponse.swift in Sources */,
 				742A18B322DE546B004C544D /* TabBarController.swift in Sources */,
 				742A18DD22DE81ED004C544D /* SingleTopicRequest.swift in Sources */,
+				118EF0E422E312F300F57FA2 /* ListTopicsByCategoryRequest.swift in Sources */,
 				742A18D022DE789D004C544D /* UITableViewCellExten.swift in Sources */,
 				11E55FB122E23D7C008FD871 /* CategoriesRepository.swift in Sources */,
 				742A18D922DE7C7C004C544D /* DetailTopicRouter.swift in Sources */,

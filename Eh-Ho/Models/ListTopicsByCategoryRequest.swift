@@ -1,23 +1,29 @@
 //
-//  LatestTopicsRequest.swift
+//  ListTopicsByCategoryRequest.swift
 //  Eh-Ho
 //
-//  Created by Ignacio Garcia Sainz on 16/07/2019.
+//  Created by Jacobo Morales Diaz on 20/07/2019.
 //  Copyright © 2019 KeepCoding. All rights reserved.
 //
 
 import Foundation
 
-struct LatestTopicsRequest: APIRequest {
+struct ListTopicsByCategoryRequest: APIRequest {
     
-    typealias Response = LatestTopicsResponse
+    typealias Response = ListTopicsByCategoryResponse
+    
+    let id: Int
+    
+    init(id:Int) {
+        self.id = id
+    }
     
     var method: Method {
         return .GET
     }
     
     var path: String {
-        return "/latest.json"
+        return "/c/\(id).json"
     }
     
     var parameters: [String : String] {
@@ -31,5 +37,5 @@ struct LatestTopicsRequest: APIRequest {
     var headers: [String : String] {
         return [:]
     }
-
+    
 }

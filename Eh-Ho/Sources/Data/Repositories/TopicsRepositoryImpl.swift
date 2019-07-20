@@ -10,6 +10,7 @@ import Foundation
 
 class TopicsRepositoryImpl: TopicsRepository {
 
+
     let session: SessionAPI
     
     init(session: SessionAPI) {
@@ -23,10 +24,17 @@ class TopicsRepositoryImpl: TopicsRepository {
         }
     }
     
-    func getLatestTopics(completion: @escaping (Result<LatestTopicsResponse, Error>) -> ()) {
-        let request = LatestTopicsRequest()
-        session.send(request: request) { result in
+    func getListTopicsByCategory(id: Int, completion: @escaping (Result<ListTopicsByCategoryResponse, Error>) -> ()) {
+        let request = ListTopicsByCategoryRequest(id: id)
+        session.send(request: request) { (result) in
             completion(result)
         }
     }
+    
+//    func getLatestTopics(completion: @escaping (Result<LatestTopicsResponse, Error>) -> ()) {
+//        let request = LatestTopicsRequest()
+//        session.send(request: request) { result in
+//            completion(result)
+//        }
+//    }
 }
