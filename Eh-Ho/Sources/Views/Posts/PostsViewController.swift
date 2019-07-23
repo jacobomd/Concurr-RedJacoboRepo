@@ -11,9 +11,14 @@ import UIKit
 class PostsViewController: UIViewController {
 
     @IBOutlet weak var tableViewPosts: UITableView!
+    
+    
     var posts : [Post2] = []
     
     let viewModel : PostViewModel
+    
+    var id: Int = 0
+    
     
     init(viewModel : PostViewModel) {
         self.viewModel = viewModel
@@ -23,6 +28,9 @@ class PostsViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,12 @@ class PostsViewController: UIViewController {
         
         viewModel.viewDidLoad()
 
+    }
+    
+    @IBAction func ButtonAddPost(_ sender: Any) {
+        
+        viewModel.didTapInTopic(id: self.id)
+        print("El id del topic es: \(id)")
     }
 
 }
@@ -49,11 +63,16 @@ extension PostsViewController: UITableViewDataSource {
         let cell = tableViewPosts.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
         cell.textLabel?.text = posts[indexPath.row].cooked
         
+        id = posts[indexPath.row].topicID
+//        viewModel.didTapInTopic(id: id)
+        
+        
+        
         return cell
     }
     
-    
 }
+
 
 extension PostsViewController: UITableViewDelegate {
     

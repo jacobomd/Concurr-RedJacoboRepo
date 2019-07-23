@@ -22,26 +22,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bys-WB-8ww">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqf-9S-Bjq">
-                    <rect key="frame" x="157" y="771" width="100" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="KMn-Nf-EJS"/>
-                        <constraint firstAttribute="height" constant="100" id="Sav-S0-cr0"/>
+                        <constraint firstAttribute="height" constant="600" id="7zz-HO-zt1"/>
                     </constraints>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csr-2K-Aza">
+                    <rect key="frame" x="164" y="702" width="88" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Añadir post"/>
+                    <connections>
+                        <action selector="ButtonAddPost:" destination="-1" eventType="touchUpInside" id="UPq-se-afB"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Bqf-9S-Bjq" firstAttribute="top" secondItem="bys-WB-8ww" secondAttribute="bottom" constant="50" id="2QM-gd-aq1"/>
-                <constraint firstItem="Bqf-9S-Bjq" firstAttribute="centerX" secondItem="bys-WB-8ww" secondAttribute="centerX" id="An6-bt-Uuz"/>
                 <constraint firstItem="bys-WB-8ww" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="C9K-hz-Mcl"/>
                 <constraint firstItem="bys-WB-8ww" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LbN-Lw-0IF"/>
                 <constraint firstItem="bys-WB-8ww" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oBr-DT-xnb"/>
-                <constraint firstAttribute="bottom" secondItem="Bqf-9S-Bjq" secondAttribute="bottom" constant="25" id="yye-vB-xuS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

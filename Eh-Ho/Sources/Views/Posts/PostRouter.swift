@@ -26,4 +26,9 @@ class PostRouter {
         return viewController
     }
     
+    func navigateToPosts(id: Int) {
+        let viewControllerToPush = PostCreateRouter.configureModule(id: id)
+        viewController?.navigationController?.pushViewController(viewControllerToPush, animated: true)
+    }
+    
 }

@@ -25,6 +25,10 @@ class PostViewModel {
         fetchListPostssByTopic()
     }
     
+    func didTapInTopic(id: Int) {
+        router.navigateToPosts(id: id)
+    }
+    
     
    private func fetchListPostssByTopic () {
     postsRepository.getListPostssByTopic(id: id) { [weak self] result in
