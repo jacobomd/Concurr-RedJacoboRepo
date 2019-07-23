@@ -12,6 +12,27 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var categoriesTable: UITableView!
     
+    
+    lazy var refreshControl:UIRefreshControl = {
+        let refresControl = UIRefreshControl()
+        //QUE AL CAMBIAR EL VALOR, SE EJECUTE UN MÉTODO
+        refresControl.addTarget(self, action: #selector(CategoriesViewController.actualizarDatos(_:)), for: .valueChanged)
+        //ESTABLECER EL COLOR DE LA RULETILLA
+        refresControl.tintColor = UIColor.blue
+        return refresControl
+    }()
+    
+    @objc func actualizarDatos(_ refresControl: UIRefreshControl){
+        //AQUI TU TIENES QUE ACTUALIZAR TUS DATOS. TU DATASOURCE. LLAMAR A TU SERVIDOR, VOLVER A TRAER LOS DATOS. ELIMINAR O AÑADIR AL ELEMENTO PERSISTIDO
+        
+        viewModel.viewDidLoad()
+        //REFRESCO LA VISTA DE TABLA
+        self.categoriesTable.reloadData()
+        //PARO EL REFRESH CONTROL
+        refresControl.endRefreshing()
+        
+    }
+    
     let viewModel: CategoriesViewModel
     var categories : [Category] = []
     
@@ -35,6 +56,7 @@ class CategoriesViewController: UIViewController {
         categoriesTable.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         
         viewModel.viewDidLoad()
+        categoriesTable.refreshControl = refreshControl
     }
     
 }

@@ -12,6 +12,26 @@ class PostsViewController: UIViewController {
 
     @IBOutlet weak var tableViewPosts: UITableView!
     
+    lazy var refreshControl:UIRefreshControl = {
+        let refresControl = UIRefreshControl()
+        //QUE AL CAMBIAR EL VALOR, SE EJECUTE UN MÉTODO
+        refresControl.addTarget(self, action: #selector(PostsViewController.actualizarDatos(_:)), for: .valueChanged)
+        //ESTABLECER EL COLOR DE LA RULETILLA
+        refresControl.tintColor = UIColor.blue
+        return refresControl
+    }()
+    
+    @objc func actualizarDatos(_ refresControl: UIRefreshControl){
+        //AQUI TU TIENES QUE ACTUALIZAR TUS DATOS. TU DATASOURCE. LLAMAR A TU SERVIDOR, VOLVER A TRAER LOS DATOS. ELIMINAR O AÑADIR AL ELEMENTO PERSISTIDO
+        
+         viewModel.viewDidLoad()
+        //REFRESCO LA VISTA DE TABLA
+        self.tableViewPosts.reloadData()
+        //PARO EL REFRESH CONTROL
+        refresControl.endRefreshing()
+        
+    }
+    
     
     var posts : [Post2] = []
     
@@ -41,7 +61,11 @@ class PostsViewController: UIViewController {
         
         tableViewPosts.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         
+        //self.tableViewPosts.addSubview(self.refreshControl)
+       
         viewModel.viewDidLoad()
+         tableViewPosts.refreshControl = refreshControl
+        
 
     }
     

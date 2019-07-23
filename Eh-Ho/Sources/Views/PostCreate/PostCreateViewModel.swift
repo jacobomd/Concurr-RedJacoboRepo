@@ -19,8 +19,7 @@ class PostCreateViewModel {
         self.router = router
         self.id = id
         self.postsRepository = postsRepository
-        
-        print("el dato deel iddd: \(id)")
+
     }
     
     func didTapInTopic(raw: String) {
@@ -31,9 +30,9 @@ class PostCreateViewModel {
     private func createNewPostByTopic(raw: String) {
         postsRepository.createNewPost(id_topic: self.id, raw: raw) { [weak self] result in
             switch result {
-            case .success(let value):
-                //self?.view?.showCreatePostsByTopic(posts: value.topicID)
-                print("llega el valor")
+            case .success( _):
+                break
+                // no enviamos nada a mostrar a la vista
             case .failure:
                 self?.view?.showError(with: "Error")
             }
