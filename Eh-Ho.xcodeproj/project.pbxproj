@@ -24,6 +24,8 @@
 		11B3D2A922E580D400F81497 /* PostCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B3D2A722E580D400F81497 /* PostCreateViewController.xib */; };
 		11B3D2AB22E5810100F81497 /* PostCreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3D2AA22E5810100F81497 /* PostCreateRouter.swift */; };
 		11B3D2AD22E5811F00F81497 /* PostCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3D2AC22E5811F00F81497 /* PostCreateViewModel.swift */; };
+		11DAA7D322E829AE00EE1238 /* UpdateSingleTopicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DAA7D222E829AE00EE1238 /* UpdateSingleTopicResponse.swift */; };
+		11DAA7D522E82A3800EE1238 /* UpdateSingleTopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DAA7D422E82A3800EE1238 /* UpdateSingleTopicRequest.swift */; };
 		11E55FAA22E23163008FD871 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E55FA822E23163008FD871 /* CategoriesViewController.swift */; };
 		11E55FAB22E23163008FD871 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E55FA922E23163008FD871 /* CategoriesViewController.xib */; };
 		11E55FAD22E23187008FD871 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E55FAC22E23187008FD871 /* CategoriesViewModel.swift */; };
@@ -74,6 +76,8 @@
 		11B3D2A722E580D400F81497 /* PostCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCreateViewController.xib; sourceTree = "<group>"; };
 		11B3D2AA22E5810100F81497 /* PostCreateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateRouter.swift; sourceTree = "<group>"; };
 		11B3D2AC22E5811F00F81497 /* PostCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateViewModel.swift; sourceTree = "<group>"; };
+		11DAA7D222E829AE00EE1238 /* UpdateSingleTopicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSingleTopicResponse.swift; sourceTree = "<group>"; };
+		11DAA7D422E82A3800EE1238 /* UpdateSingleTopicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSingleTopicRequest.swift; sourceTree = "<group>"; };
 		11E55FA822E23163008FD871 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		11E55FA922E23163008FD871 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		11E55FAC22E23187008FD871 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				118EF0E322E312F300F57FA2 /* ListTopicsByCategoryRequest.swift */,
 				118EF0EC22E36A9E00F57FA2 /* ListPostsByTopicRequest.swift */,
 				11F5243222E4BC6100F9653E /* CreatePostRequest.swift */,
+				11DAA7D422E82A3800EE1238 /* UpdateSingleTopicRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				118EF0E122E311AF00F57FA2 /* ListTopicsByCategoryResponse.swift */,
 				118EF0EA22E365E800F57FA2 /* ListPostsByTopicResponse.swift */,
 				11F5243022E4BBF300F9653E /* AddNewPostResponse.swift */,
+				11DAA7D222E829AE00EE1238 /* UpdateSingleTopicResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				11F5243322E4BC6100F9653E /* CreatePostRequest.swift in Sources */,
 				742A18C622DE6999004C544D /* TopicsRepositoryImpl.swift in Sources */,
 				742A18D722DE7C65004C544D /* DetailTopicViewModel.swift in Sources */,
+				11DAA7D522E82A3800EE1238 /* UpdateSingleTopicRequest.swift in Sources */,
 				118EF0EF22E36BD300F57FA2 /* PostsRepository.swift in Sources */,
 				11E55FAD22E23187008FD871 /* CategoriesViewModel.swift in Sources */,
 				742A18CA22DE6F37004C544D /* TopicsViewModel.swift in Sources */,
@@ -456,6 +463,7 @@
 				11E55FAF22E231A3008FD871 /* CategoriesRouter.swift in Sources */,
 				11B3D2AD22E5811F00F81497 /* PostCreateViewModel.swift in Sources */,
 				118EF0E822E34D7100F57FA2 /* TopicCell.swift in Sources */,
+				11DAA7D322E829AE00EE1238 /* UpdateSingleTopicResponse.swift in Sources */,
 				742A18B722DE5540004C544D /* TopicsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
