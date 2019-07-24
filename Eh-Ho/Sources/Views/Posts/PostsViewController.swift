@@ -14,7 +14,7 @@ class PostsViewController: UIViewController {
     
     var posts : [Post2] = []
     
-    var topic : BasicTopic!
+    //var topic : BasicTopic!
     
     let viewModel : PostViewModel
     
@@ -131,7 +131,11 @@ extension PostsViewController: UITableViewDataSource {
         cell.textLabel?.text = posts[indexPath.row].cooked
         id = posts[indexPath.row].topicID
         
-       // self.editable_topic  = posts[id].canEdit
+       editable_topic  = posts[indexPath.row].canEdit
+        
+        if (editable_topic) {
+            setupUI()
+        }
         
         print("el id del topic es \(id)")
         
@@ -159,18 +163,14 @@ extension PostsViewController: PostsViewControllerProtocol {
     func showListPostssByTopic(posts: [Post2]) {
         
         self.posts = posts
-        //self.editable_topic  = posts[self.id].canEdit
         
         self.tableViewPosts.reloadData()
-        //print("topic con un id de \(self.id)")
-        
-        self.editable_topic  = posts[self.id].canEdit
         
         print("el editable esta a \(self.editable_topic) y su idtopic es \(self.id)")
         
-        if (editable_topic) {
-            setupUI()
-        }
+
+        
+        
   
     }
     
