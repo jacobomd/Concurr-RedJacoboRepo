@@ -12,6 +12,8 @@ class PostsViewController: UIViewController {
 
     @IBOutlet weak var tableViewPosts: UITableView!
     
+    var editable_topic: Bool = false
+    
     lazy var refreshControl:UIRefreshControl = {
         let refresControl = UIRefreshControl()
         //QUE AL CAMBIAR EL VALOR, SE EJECUTE UN MÉTODO
@@ -39,6 +41,8 @@ class PostsViewController: UIViewController {
     
     var id: Int = 0
     
+    var newTitle: String = ""
+    
     
     init(viewModel : PostViewModel) {
         self.viewModel = viewModel
@@ -50,7 +54,10 @@ class PostsViewController: UIViewController {
     }
     
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,12 +68,49 @@ class PostsViewController: UIViewController {
         
         tableViewPosts.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         
-        //self.tableViewPosts.addSubview(self.refreshControl)
-       
         viewModel.viewDidLoad()
-         tableViewPosts.refreshControl = refreshControl
         
+        tableViewPosts.refreshControl = refreshControl
 
+    }
+    
+    // Mark: - UI
+    func setupUI() {
+        // Button creation
+        let editTopic = UIBarButtonItem(title: "Editar topic", style: .plain, target: self, action: #selector(displayEdit))
+        // Add button
+        navigationItem.rightBarButtonItems = [editTopic]
+    }
+    
+    // Mark: - Navigation
+    @objc func displayEdit() {
+        // WikiViewController creation
+        //let wikiViewController = WikiViewController(model: model)
+        showPustTopicAlert()
+        // Push
+        //navigationController?.pushViewController(wikiViewController, animated: true)
+    }
+    
+    private func showPustTopicAlert() -> String {
+        //Create the alert
+        let alert = UIAlertController(title: "Editar topic", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { (UITextField) in
+            UITextField.placeholder = "Enter new title topic"
+            UITextField.textAlignment = .center
+        }
+        
+        //Creamos la accion
+        let action = UIAlertAction(title: "ok", style: .default) { [unowned alert] _ in
+            self.newTitle = alert.textFields![0].text!
+        }
+        
+        
+        //Aañadimos a la alerta
+        alert.addAction(action)
+        
+        self.present(alert, animated: true, completion: nil)
+        return newTitle
     }
     
     @IBAction func ButtonAddPost(_ sender: Any) {
@@ -86,7 +130,6 @@ extension PostsViewController: UITableViewDataSource {
         
         let cell = tableViewPosts.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
         cell.textLabel?.text = posts[indexPath.row].cooked
-        
         id = posts[indexPath.row].topicID
 //        viewModel.didTapInTopic(id: id)
         
@@ -112,6 +155,10 @@ protocol PostsViewControllerProtocol: class {
 extension PostsViewController: PostsViewControllerProtocol {
     func showListPostssByTopic(posts: [Post2]) {
         self.posts = posts
+        editable_topic = posts[id].canEdit
+        if (editable_topic) {
+            setupUI()
+        }
         self.tableViewPosts.reloadData()
     }
     
