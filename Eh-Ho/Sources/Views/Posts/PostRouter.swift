@@ -17,7 +17,8 @@ class PostRouter {
         let router = PostRouter()
         let sessionApi = SessionAPI()
         let postsRepository = PostRepositoryImpl(session: sessionApi)
-        let viewModel = PostViewModel(router: router, id: id, postsRepository: postsRepository)
+        let topicRepository = TopicsRepositoryImpl(session: sessionApi)
+        let viewModel = PostViewModel(router: router, id: id, postsRepository: postsRepository, topicRepository: topicRepository)
         let viewController = PostsViewController(viewModel: viewModel)
         
         viewModel.view = viewController

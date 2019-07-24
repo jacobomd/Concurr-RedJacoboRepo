@@ -10,7 +10,6 @@ import Foundation
 
 class TopicsRepositoryImpl: TopicsRepository {
 
-
     let session: SessionAPI
     
     init(session: SessionAPI) {
@@ -26,6 +25,13 @@ class TopicsRepositoryImpl: TopicsRepository {
     
     func getListTopicsByCategory(id: Int, completion: @escaping (Result<ListTopicsByCategoryResponse, Error>) -> ()) {
         let request = ListTopicsByCategoryRequest(id: id)
+        session.send(request: request) { (result) in
+            completion(result)
+        }
+    }
+    
+    func updateSingleTopic(idTopic: Int, title: String, completion: @escaping (Result<UpdateSingleTopicResponse, Error>) -> ()) {
+        let request = UpdateSingleTopicRequest(title: title, topicId: idTopic)
         session.send(request: request) { (result) in
             completion(result)
         }

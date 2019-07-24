@@ -12,6 +12,16 @@ class PostsViewController: UIViewController {
 
     @IBOutlet weak var tableViewPosts: UITableView!
     
+    var posts : [Post2] = []
+    
+    var topic : BasicTopic!
+    
+    let viewModel : PostViewModel
+    
+    var id: Int = 0
+    
+    var newTitle: String = ""
+    
     var editable_topic: Bool = false
     
     lazy var refreshControl:UIRefreshControl = {
@@ -26,7 +36,7 @@ class PostsViewController: UIViewController {
     @objc func actualizarDatos(_ refresControl: UIRefreshControl){
         //AQUI TU TIENES QUE ACTUALIZAR TUS DATOS. TU DATASOURCE. LLAMAR A TU SERVIDOR, VOLVER A TRAER LOS DATOS. ELIMINAR O AÑADIR AL ELEMENTO PERSISTIDO
         
-         viewModel.viewDidLoad()
+        viewModel.viewDidLoad()
         //REFRESCO LA VISTA DE TABLA
         self.tableViewPosts.reloadData()
         //PARO EL REFRESH CONTROL
@@ -35,13 +45,7 @@ class PostsViewController: UIViewController {
     }
     
     
-    var posts : [Post2] = []
-    
-    let viewModel : PostViewModel
-    
-    var id: Int = 0
-    
-    var newTitle: String = ""
+
     
     
     init(viewModel : PostViewModel) {
@@ -84,14 +88,11 @@ class PostsViewController: UIViewController {
     
     // Mark: - Navigation
     @objc func displayEdit() {
-        // WikiViewController creation
-        //let wikiViewController = WikiViewController(model: model)
-        showPustTopicAlert()
-        // Push
-        //navigationController?.pushViewController(wikiViewController, animated: true)
+
+       showPustTopicAlert()
     }
     
-    private func showPustTopicAlert() -> String {
+    private func showPustTopicAlert()  {
         //Create the alert
         let alert = UIAlertController(title: "Editar topic", message: nil, preferredStyle: .alert)
         
@@ -103,20 +104,18 @@ class PostsViewController: UIViewController {
         //Creamos la accion
         let action = UIAlertAction(title: "ok", style: .default) { [unowned alert] _ in
             self.newTitle = alert.textFields![0].text!
+            self.viewModel.didUpDateTopic(title: self.newTitle)
         }
-        
         
         //Aañadimos a la alerta
         alert.addAction(action)
         
         self.present(alert, animated: true, completion: nil)
-        return newTitle
     }
     
     @IBAction func ButtonAddPost(_ sender: Any) {
         
         viewModel.didTapInTopic(id: self.id)
-        print("El id del topic es: \(id)")
     }
 
 }
@@ -131,9 +130,12 @@ extension PostsViewController: UITableViewDataSource {
         let cell = tableViewPosts.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
         cell.textLabel?.text = posts[indexPath.row].cooked
         id = posts[indexPath.row].topicID
-//        viewModel.didTapInTopic(id: id)
         
+       // self.editable_topic  = posts[id].canEdit
         
+        print("el id del topic es \(id)")
+        
+
         
         return cell
     }
@@ -153,13 +155,23 @@ protocol PostsViewControllerProtocol: class {
 }
 
 extension PostsViewController: PostsViewControllerProtocol {
+
     func showListPostssByTopic(posts: [Post2]) {
+        
         self.posts = posts
-        editable_topic = posts[id].canEdit
+        //self.editable_topic  = posts[self.id].canEdit
+        
+        self.tableViewPosts.reloadData()
+        //print("topic con un id de \(self.id)")
+        
+        self.editable_topic  = posts[self.id].canEdit
+        
+        print("el editable esta a \(self.editable_topic) y su idtopic es \(self.id)")
+        
         if (editable_topic) {
             setupUI()
         }
-        self.tableViewPosts.reloadData()
+  
     }
     
     func showError(with message: String) {
