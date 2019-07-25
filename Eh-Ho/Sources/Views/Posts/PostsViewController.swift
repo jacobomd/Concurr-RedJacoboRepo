@@ -14,14 +14,10 @@ class PostsViewController: UIViewController {
     
     var posts : [Post2] = []
     
-    //var topic : BasicTopic!
-    
     let viewModel : PostViewModel
     
     var id: Int = 0
-    
     var newTitle: String = ""
-    
     var editable_topic: Bool = false
     
     lazy var refreshControl:UIRefreshControl = {
@@ -35,7 +31,6 @@ class PostsViewController: UIViewController {
     
     @objc func actualizarDatos(_ refresControl: UIRefreshControl){
         //AQUI TU TIENES QUE ACTUALIZAR TUS DATOS. TU DATASOURCE. LLAMAR A TU SERVIDOR, VOLVER A TRAER LOS DATOS. ELIMINAR O AÑADIR AL ELEMENTO PERSISTIDO
-        
         viewModel.viewDidLoad()
         //REFRESCO LA VISTA DE TABLA
         self.tableViewPosts.reloadData()
@@ -43,10 +38,6 @@ class PostsViewController: UIViewController {
         refresControl.endRefreshing()
         
     }
-    
-    
-
-    
     
     init(viewModel : PostViewModel) {
         self.viewModel = viewModel
@@ -88,7 +79,6 @@ class PostsViewController: UIViewController {
     
     // Mark: - Navigation
     @objc func displayEdit() {
-
        showPustTopicAlert()
     }
     
@@ -109,7 +99,6 @@ class PostsViewController: UIViewController {
         
         //Aañadimos a la alerta
         alert.addAction(action)
-        
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -129,18 +118,14 @@ extension PostsViewController: UITableViewDataSource {
         
         let cell = tableViewPosts.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
         cell.textLabel?.text = posts[indexPath.row].cooked
-        id = posts[indexPath.row].topicID
         
-       editable_topic  = posts[indexPath.row].canEdit
+        id = posts[indexPath.row].topicID
+        editable_topic  = posts[indexPath.row].canEdit
         
         if (editable_topic) {
             setupUI()
         }
-        
-        print("el id del topic es \(id)")
-        
 
-        
         return cell
     }
     
@@ -161,17 +146,8 @@ protocol PostsViewControllerProtocol: class {
 extension PostsViewController: PostsViewControllerProtocol {
 
     func showListPostssByTopic(posts: [Post2]) {
-        
         self.posts = posts
-        
         self.tableViewPosts.reloadData()
-        
-        print("el editable esta a \(self.editable_topic) y su idtopic es \(self.id)")
-        
-
-        
-        
-  
     }
     
     func showError(with message: String) {
