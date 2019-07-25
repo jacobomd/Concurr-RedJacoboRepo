@@ -10,8 +10,8 @@ import UIKit
 
 class PostCreateViewController: UIViewController {
 
-    @IBOutlet weak var textViewRawPost: UITextView!
         
+    @IBOutlet weak var textfieldRawPost: UITextField!
     let viewModel: PostCreateViewModel
     
     var textoRaw: String = ""
@@ -28,12 +28,13 @@ class PostCreateViewController: UIViewController {
     }
     
     @IBAction func ButtonSavePost(_ sender: Any) {
-        textoRaw = textViewRawPost.text
+        textoRaw = textfieldRawPost.text!
         viewModel.didTapInTopic(raw: textoRaw)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textfieldRawPost.placeholder = "Introduce el nuevo post"
         self.title = "Crear nuevo post"
     
     }

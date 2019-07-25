@@ -11,9 +11,11 @@ import UIKit
 class TabBarController: UITabBarController {
 
     let categoriesController: UIViewController
+    let addController: UIViewController
     
-    init(categoriesController: UIViewController) {
+    init(categoriesController: UIViewController, addController: UIViewController) {
         self.categoriesController = categoriesController
+        self.addController = addController
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,10 +34,13 @@ class TabBarController: UITabBarController {
         let categoriesController = self.categoriesController
         categoriesController.tabBarItem = UITabBarItem(title: "Topics", image: nil, selectedImage: nil)
         
+        let addController = self.addController
+        addController.tabBarItem = UITabBarItem(title: "Añadir", image: nil, selectedImage: nil)
+        
         
         self.tabBar.barTintColor = .white
         
-        let controllers = [categoriesController]
+        let controllers = [categoriesController,addController]
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
         //self.viewControllers = controllers.map { $0 }
 

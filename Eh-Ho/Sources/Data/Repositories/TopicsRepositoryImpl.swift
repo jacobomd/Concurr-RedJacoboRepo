@@ -10,6 +10,7 @@ import Foundation
 
 class TopicsRepositoryImpl: TopicsRepository {
 
+
     let session: SessionAPI
     
     init(session: SessionAPI) {
@@ -36,5 +37,13 @@ class TopicsRepositoryImpl: TopicsRepository {
             completion(result)
         }
     }
+    
+    func createNewTopic(title: String, raw: String, completion: @escaping (Result<AddNewTopicResponse, Error>) -> ()) {
+        let request = CreateTopicRequest(title: title, raw: raw)
+        session.send(request: request) { (result) in
+            completion(result)
+        }
+    }
+    
 
 }
