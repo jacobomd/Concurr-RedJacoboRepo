@@ -33,6 +33,7 @@ class CreateTopicsViewController: UIViewController {
         super.viewDidLoad()
         textfieldTitulo.placeholder = "Introduce el titulo"
         textfieldDescripcion.placeholder = "Intoduce la descripcion ..."
+
         self.title = "Crear topics"
     }
 
@@ -40,9 +41,18 @@ class CreateTopicsViewController: UIViewController {
         
         textTitle = textfieldTitulo.text
         textDescription = textfieldDescripcion.text
-        viewModel.didTapInTopic(title: textTitle!, raw: textDescription!)
-        textfieldTitulo.text = ""
-        textfieldDescripcion.text = ""
+        
+        if (textfieldTitulo.text!.count < 15) {
+            showPustTopicAlert(message: "Introduzca más de 15 caracteres en titulo")
+        }else if (textfieldDescripcion.text!.count < 20) {
+            showPustTopicAlert(message: "Introduzca más de 20 caracteres en descripción")
+        }else {
+            viewModel.didTapInTopic(title: textTitle!, raw: textDescription!)
+            textfieldTitulo.text = ""
+            textfieldDescripcion.text = ""
+        }
+        
+
     }
 }
 
@@ -55,7 +65,7 @@ protocol CreateTopicsViewControllerProtocol: class {
 
 extension CreateTopicsViewController: CreateTopicsViewControllerProtocol {
     func createNewTopic() {
-        showPustTopicAlert()
+        showPustTopicAlert(message: "Topic creado con exito")
     }
     
     func showError(with message: String) {
@@ -67,9 +77,9 @@ extension CreateTopicsViewController: CreateTopicsViewControllerProtocol {
 
 extension CreateTopicsViewController {
     
-    private func showPustTopicAlert()  {
+    private func showPustTopicAlert(message: String)  {
         //Create the alert
-        let alert = UIAlertController(title: "Topic creado con exito", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
         
         //Creamos la accion
         let action = UIAlertAction(title: "ok", style: .default, handler: nil)
