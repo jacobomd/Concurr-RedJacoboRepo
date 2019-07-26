@@ -70,7 +70,7 @@ extension CreateTopicsViewController: CreateTopicsViewControllerProtocol {
     
     func showError(with message: String) {
         //AQUI ENSEÑAMOS ALERTA
-        print("ERROR")
+        showPustTopicAlert(message: "Se ha producido un error al crear el topic")
     }
     
 }
