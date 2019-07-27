@@ -27,7 +27,25 @@
 		11B3D2A922E580D400F81497 /* PostCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B3D2A722E580D400F81497 /* PostCreateViewController.xib */; };
 		11B3D2AB22E5810100F81497 /* PostCreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3D2AA22E5810100F81497 /* PostCreateRouter.swift */; };
 		11B3D2AD22E5811F00F81497 /* PostCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3D2AC22E5811F00F81497 /* PostCreateViewModel.swift */; };
+		11BAFEB322EB35E8004C026E /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEB122EB35E8004C026E /* UsersViewController.swift */; };
+		11BAFEB422EB35E8004C026E /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BAFEB222EB35E8004C026E /* UsersViewController.xib */; };
+		11BAFEB622EB35F7004C026E /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEB522EB35F7004C026E /* UsersViewModel.swift */; };
+		11BAFEB822EB3606004C026E /* UsersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEB722EB3606004C026E /* UsersRouter.swift */; };
+		11BAFEBC22EB367A004C026E /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEBA22EB367A004C026E /* UsersTableViewCell.swift */; };
+		11BAFEBD22EB367A004C026E /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BAFEBB22EB367A004C026E /* UsersTableViewCell.xib */; };
+		11BAFEBF22EB3DEF004C026E /* ListUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEBE22EB3DEF004C026E /* ListUsersResponse.swift */; };
+		11BAFEC122EB3EB1004C026E /* ListUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEC022EB3EB1004C026E /* ListUsersRequest.swift */; };
+		11BAFEC322EB4015004C026E /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEC222EB4015004C026E /* UsersRepository.swift */; };
+		11BAFEC522EB402D004C026E /* UsersRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAFEC422EB402D004C026E /* UsersRepositoryImpl.swift */; };
 		11BE96FF22E9EE3E00450F45 /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BE96FE22E9EE3D00450F45 /* TopicCell.xib */; };
+		11D43F6822EC42980053933A /* SendNewMessagePrivateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F6722EC42980053933A /* SendNewMessagePrivateResponse.swift */; };
+		11D43F6A22EC432C0053933A /* SendNewMessagePrivateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F6922EC432C0053933A /* SendNewMessagePrivateRequest.swift */; };
+		11D43F6C22EC45090053933A /* MessagesPrivatesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F6B22EC45090053933A /* MessagesPrivatesRepository.swift */; };
+		11D43F6E22EC45220053933A /* MessagesPrivatesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F6D22EC45220053933A /* MessagesPrivatesRepositoryImpl.swift */; };
+		11D43F7222EC47B10053933A /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F7022EC47B10053933A /* SendMessageViewController.swift */; };
+		11D43F7322EC47B10053933A /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D43F7122EC47B10053933A /* SendMessageViewController.xib */; };
+		11D43F7522EC47C10053933A /* SendMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F7422EC47C10053933A /* SendMessageRouter.swift */; };
+		11D43F7722EC47D60053933A /* SendMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F7622EC47D60053933A /* SendMessageViewModel.swift */; };
 		11DAA7D322E829AE00EE1238 /* UpdateSingleTopicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DAA7D222E829AE00EE1238 /* UpdateSingleTopicResponse.swift */; };
 		11DAA7D522E82A3800EE1238 /* UpdateSingleTopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DAA7D422E82A3800EE1238 /* UpdateSingleTopicRequest.swift */; };
 		11E55FAA22E23163008FD871 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E55FA822E23163008FD871 /* CategoriesViewController.swift */; };
@@ -83,7 +101,25 @@
 		11B3D2A722E580D400F81497 /* PostCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCreateViewController.xib; sourceTree = "<group>"; };
 		11B3D2AA22E5810100F81497 /* PostCreateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateRouter.swift; sourceTree = "<group>"; };
 		11B3D2AC22E5811F00F81497 /* PostCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateViewModel.swift; sourceTree = "<group>"; };
+		11BAFEB122EB35E8004C026E /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		11BAFEB222EB35E8004C026E /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		11BAFEB522EB35F7004C026E /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		11BAFEB722EB3606004C026E /* UsersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRouter.swift; sourceTree = "<group>"; };
+		11BAFEBA22EB367A004C026E /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		11BAFEBB22EB367A004C026E /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
+		11BAFEBE22EB3DEF004C026E /* ListUsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersResponse.swift; sourceTree = "<group>"; };
+		11BAFEC022EB3EB1004C026E /* ListUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersRequest.swift; sourceTree = "<group>"; };
+		11BAFEC222EB4015004C026E /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		11BAFEC422EB402D004C026E /* UsersRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepositoryImpl.swift; sourceTree = "<group>"; };
 		11BE96FE22E9EE3D00450F45 /* TopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
+		11D43F6722EC42980053933A /* SendNewMessagePrivateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNewMessagePrivateResponse.swift; sourceTree = "<group>"; };
+		11D43F6922EC432C0053933A /* SendNewMessagePrivateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNewMessagePrivateRequest.swift; sourceTree = "<group>"; };
+		11D43F6B22EC45090053933A /* MessagesPrivatesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPrivatesRepository.swift; sourceTree = "<group>"; };
+		11D43F6D22EC45220053933A /* MessagesPrivatesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPrivatesRepositoryImpl.swift; sourceTree = "<group>"; };
+		11D43F7022EC47B10053933A /* SendMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
+		11D43F7122EC47B10053933A /* SendMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendMessageViewController.xib; sourceTree = "<group>"; };
+		11D43F7422EC47C10053933A /* SendMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageRouter.swift; sourceTree = "<group>"; };
+		11D43F7622EC47D60053933A /* SendMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageViewModel.swift; sourceTree = "<group>"; };
 		11DAA7D222E829AE00EE1238 /* UpdateSingleTopicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSingleTopicResponse.swift; sourceTree = "<group>"; };
 		11DAA7D422E82A3800EE1238 /* UpdateSingleTopicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSingleTopicRequest.swift; sourceTree = "<group>"; };
 		11E55FA822E23163008FD871 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +209,38 @@
 			path = PostCreate;
 			sourceTree = "<group>";
 		};
+		11BAFEB022EB35AB004C026E /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				11BAFEB922EB3632004C026E /* Cell */,
+				11BAFEB122EB35E8004C026E /* UsersViewController.swift */,
+				11BAFEB222EB35E8004C026E /* UsersViewController.xib */,
+				11BAFEB522EB35F7004C026E /* UsersViewModel.swift */,
+				11BAFEB722EB3606004C026E /* UsersRouter.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		11BAFEB922EB3632004C026E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				11BAFEBA22EB367A004C026E /* UsersTableViewCell.swift */,
+				11BAFEBB22EB367A004C026E /* UsersTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		11D43F6F22EC476F0053933A /* SendMessages */ = {
+			isa = PBXGroup;
+			children = (
+				11D43F7022EC47B10053933A /* SendMessageViewController.swift */,
+				11D43F7122EC47B10053933A /* SendMessageViewController.xib */,
+				11D43F7422EC47C10053933A /* SendMessageRouter.swift */,
+				11D43F7622EC47D60053933A /* SendMessageViewModel.swift */,
+			);
+			path = SendMessages;
+			sourceTree = "<group>";
+		};
 		11E55FA722E230B6008FD871 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +326,8 @@
 		742A18B022DE5420004C544D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11D43F6F22EC476F0053933A /* SendMessages */,
+				11BAFEB022EB35AB004C026E /* Users */,
 				11A4528E22E9828D00439C70 /* CreateTopics */,
 				11B3D2A522E5808800F81497 /* PostCreate */,
 				118EF0F222E36E5F00F57FA2 /* Posts */,
@@ -318,6 +388,8 @@
 				118EF0EC22E36A9E00F57FA2 /* ListPostsByTopicRequest.swift */,
 				11F5243222E4BC6100F9653E /* CreatePostRequest.swift */,
 				11DAA7D422E82A3800EE1238 /* UpdateSingleTopicRequest.swift */,
+				11BAFEC022EB3EB1004C026E /* ListUsersRequest.swift */,
+				11D43F6922EC432C0053933A /* SendNewMessagePrivateRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +403,10 @@
 				11E55FB222E23DA7008FD871 /* CategoriesRepositoryImpl.swift */,
 				118EF0EE22E36BD300F57FA2 /* PostsRepository.swift */,
 				118EF0F022E36BF700F57FA2 /* PostRepositoryImpl.swift */,
+				11BAFEC222EB4015004C026E /* UsersRepository.swift */,
+				11BAFEC422EB402D004C026E /* UsersRepositoryImpl.swift */,
+				11D43F6B22EC45090053933A /* MessagesPrivatesRepository.swift */,
+				11D43F6D22EC45220053933A /* MessagesPrivatesRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -345,6 +421,8 @@
 				118EF0EA22E365E800F57FA2 /* ListPostsByTopicResponse.swift */,
 				11F5243022E4BBF300F9653E /* AddNewPostResponse.swift */,
 				11DAA7D222E829AE00EE1238 /* UpdateSingleTopicResponse.swift */,
+				11BAFEBE22EB3DEF004C026E /* ListUsersResponse.swift */,
+				11D43F6722EC42980053933A /* SendNewMessagePrivateResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -426,11 +504,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D43F7322EC47B10053933A /* SendMessageViewController.xib in Resources */,
 				742A18A422DE530B004C544D /* LaunchScreen.storyboard in Resources */,
 				742A18A122DE530B004C544D /* Assets.xcassets in Resources */,
 				11E55FAB22E23163008FD871 /* CategoriesViewController.xib in Resources */,
 				11A4529222E982D200439C70 /* CreateTopicsViewController.xib in Resources */,
+				11BAFEBD22EB367A004C026E /* UsersTableViewCell.xib in Resources */,
 				742A18B822DE5540004C544D /* TopicsViewController.xib in Resources */,
+				11BAFEB422EB35E8004C026E /* UsersViewController.xib in Resources */,
 				11BE96FF22E9EE3E00450F45 /* TopicCell.xib in Resources */,
 				742A18D522DE7C47004C544D /* DetailTopicViewController.xib in Resources */,
 				118EF0F622E36F0200F57FA2 /* PostsViewController.xib in Resources */,
@@ -452,12 +533,16 @@
 				742A18DB22DE8136004C544D /* SingleTopicResponse.swift in Sources */,
 				742A18D422DE7C47004C544D /* DetailTopicViewController.swift in Sources */,
 				118EF0F122E36BF700F57FA2 /* PostRepositoryImpl.swift in Sources */,
+				11BAFEB322EB35E8004C026E /* UsersViewController.swift in Sources */,
+				11BAFEC522EB402D004C026E /* UsersRepositoryImpl.swift in Sources */,
 				118EF0FA22E36F3B00F57FA2 /* PostViewModel.swift in Sources */,
 				742A18C822DE6F23004C544D /* TopicsRouter.swift in Sources */,
 				118EF0E222E311AF00F57FA2 /* ListTopicsByCategoryResponse.swift in Sources */,
 				11A4529622E9834300439C70 /* CreateTopicsRouter.swift in Sources */,
 				742A18B322DE546B004C544D /* TabBarController.swift in Sources */,
+				11D43F7522EC47C10053933A /* SendMessageRouter.swift in Sources */,
 				742A18DD22DE81ED004C544D /* SingleTopicRequest.swift in Sources */,
+				11D43F6E22EC45220053933A /* MessagesPrivatesRepositoryImpl.swift in Sources */,
 				118EF0E422E312F300F57FA2 /* ListTopicsByCategoryRequest.swift in Sources */,
 				742A18D022DE789D004C544D /* UITableViewCellExten.swift in Sources */,
 				11A4529122E982D200439C70 /* CreateTopicsViewController.swift in Sources */,
@@ -466,6 +551,7 @@
 				11E55FB122E23D7C008FD871 /* CategoriesRepository.swift in Sources */,
 				742A18D922DE7C7C004C544D /* DetailTopicRouter.swift in Sources */,
 				11F5243322E4BC6100F9653E /* CreatePostRequest.swift in Sources */,
+				11BAFEC322EB4015004C026E /* UsersRepository.swift in Sources */,
 				742A18C622DE6999004C544D /* TopicsRepositoryImpl.swift in Sources */,
 				742A18D722DE7C65004C544D /* DetailTopicViewModel.swift in Sources */,
 				11DAA7D522E82A3800EE1238 /* UpdateSingleTopicRequest.swift in Sources */,
@@ -473,21 +559,31 @@
 				11A4529422E9830D00439C70 /* CreateTopisViewModel.swift in Sources */,
 				11E55FAD22E23187008FD871 /* CategoriesViewModel.swift in Sources */,
 				742A18CA22DE6F37004C544D /* TopicsViewModel.swift in Sources */,
+				11D43F7722EC47D60053933A /* SendMessageViewModel.swift in Sources */,
 				11E55FAA22E23163008FD871 /* CategoriesViewController.swift in Sources */,
 				11E55FB322E23DA7008FD871 /* CategoriesRepositoryImpl.swift in Sources */,
+				11D43F6822EC42980053933A /* SendNewMessagePrivateResponse.swift in Sources */,
+				11BAFEB822EB3606004C026E /* UsersRouter.swift in Sources */,
 				742A18BC22DE581F004C544D /* APIRequest.swift in Sources */,
 				11E55FB522E2606E008FD871 /* ListCategoriesResponse.swift in Sources */,
+				11BAFEC122EB3EB1004C026E /* ListUsersRequest.swift in Sources */,
 				742A18DF22DE8526004C544D /* CreateTopicRequest.swift in Sources */,
 				118EF0ED22E36A9E00F57FA2 /* ListPostsByTopicRequest.swift in Sources */,
+				11BAFEB622EB35F7004C026E /* UsersViewModel.swift in Sources */,
+				11D43F6C22EC45090053933A /* MessagesPrivatesRepository.swift in Sources */,
+				11BAFEBF22EB3DEF004C026E /* ListUsersResponse.swift in Sources */,
 				742A18E122DE858A004C544D /* AddNewTopicResponse.swift in Sources */,
 				11B3D2A822E580D400F81497 /* PostCreateViewController.swift in Sources */,
 				742A18BE22DE620C004C544D /* APIClient.swift in Sources */,
+				11BAFEBC22EB367A004C026E /* UsersTableViewCell.swift in Sources */,
 				11F5243122E4BBF300F9653E /* AddNewPostResponse.swift in Sources */,
 				113BFD4A22E26650003D3CA8 /* ListCategoriesRequest.swift in Sources */,
 				11E55FAF22E231A3008FD871 /* CategoriesRouter.swift in Sources */,
 				11B3D2AD22E5811F00F81497 /* PostCreateViewModel.swift in Sources */,
 				118EF0E822E34D7100F57FA2 /* TopicCell.swift in Sources */,
 				11DAA7D322E829AE00EE1238 /* UpdateSingleTopicResponse.swift in Sources */,
+				11D43F6A22EC432C0053933A /* SendNewMessagePrivateRequest.swift in Sources */,
+				11D43F7222EC47B10053933A /* SendMessageViewController.swift in Sources */,
 				742A18B722DE5540004C544D /* TopicsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

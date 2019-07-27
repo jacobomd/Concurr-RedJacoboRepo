@@ -1,24 +1,29 @@
 //
-//  CreateTopicRequest.swift
+//  SendNewMessagePrivateRequest.swift
 //  Eh-Ho
 //
-//  Created by Ignacio Garcia Sainz on 17/07/2019.
+//  Created by Jacobo Morales Diaz on 27/07/2019.
 //  Copyright © 2019 KeepCoding. All rights reserved.
 //
 
 import Foundation
 
-struct CreateTopicRequest: APIRequest {
+struct SendNewMessagePrivateRequest: APIRequest {
     
-    typealias Response = AddNewTopicResponse
+    typealias Response = SendNewMessagePrivateResponse
     
     let title: String
     let raw: String
-
+    let target_usernames: String
+    var archetype: String
+    
     init(title: String,
-         raw: String) {
+         raw: String,
+         target_usernames: String) {
         self.title = title
         self.raw = raw
+        self.target_usernames = target_usernames
+        self.archetype = "private_message"
     }
     
     var method: Method {
@@ -35,7 +40,10 @@ struct CreateTopicRequest: APIRequest {
     
     var body: [String : Any] {
         return ["title": title,
-                "raw": raw]
+                "raw": raw,
+                "target_usernames": target_usernames,
+                "archetype": archetype
+        ]
     }
     
     var headers: [String : String] {

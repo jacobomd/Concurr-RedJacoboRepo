@@ -24,19 +24,19 @@ class DetailTopicViewModel {
     }
     
     func viewDidLoad() {
-        fetchSingleTopic()
+       // fetchSingleTopic()
     }
     
-    private func fetchSingleTopic() {
-        topicsRepository.getSingleTopicById(id: id) { result in
-            switch result {
-            case .success(let value):
-                //Enviariamos a la vista para mostrar la info
-                print("LLEGA EL VALOR")
-            case .failure(let error):
-                //Enviaremos a la vista el error
-                break
-            }
-        }
-    }
+//    private func fetchSingleTopic() {
+//        topicsRepository.getSingleTopicById(id: id) { result in
+//            switch result {
+//            case .success(let value):
+//                //Enviariamos a la vista para mostrar la info
+//                print("LLEGA EL VALOR")
+//            case .failure(let error):
+//                //Enviaremos a la vista el error
+//                break
+//            }
+//        }
+//    }
 }

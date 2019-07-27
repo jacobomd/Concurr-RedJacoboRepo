@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let tabBar = TabBarController(categoriesController: CategoriesRouter.configureModule(), addController: CreateTopicsRouter.configureModule())
+        let tabBar = TabBarController(categoriesController: CategoriesRouter.configureModule(), addController: CreateTopicsRouter.configureModule(), users: UsersRouter.configureModule())
         window?.rootViewController = tabBar
         
         return true

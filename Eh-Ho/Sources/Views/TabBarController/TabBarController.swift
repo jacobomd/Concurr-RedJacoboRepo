@@ -12,10 +12,12 @@ class TabBarController: UITabBarController {
 
     let categoriesController: UIViewController
     let addController: UIViewController
+    let users: UIViewController
     
-    init(categoriesController: UIViewController, addController: UIViewController) {
+    init(categoriesController: UIViewController, addController: UIViewController, users: UIViewController) {
         self.categoriesController = categoriesController
         self.addController = addController
+        self.users = users
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,6 +32,10 @@ class TabBarController: UITabBarController {
         configureTabBar()
     }
     
+    override func awakeFromNib() {
+    
+    }
+    
     private func configureTabBar() {
         let categoriesController = self.categoriesController
         categoriesController.tabBarItem = UITabBarItem(title: "Topics", image: nil, selectedImage: nil)
@@ -37,13 +43,15 @@ class TabBarController: UITabBarController {
         let addController = self.addController
         addController.tabBarItem = UITabBarItem(title: "Añadir", image: nil, selectedImage: nil)
         
+        let users = self.users
+        users.tabBarItem = UITabBarItem(title: "Usuarios", image: nil, selectedImage: nil)
+        
         
         self.tabBar.barTintColor = .white
         
-        let controllers = [categoriesController,addController]
+        let controllers = [categoriesController,addController,users]
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
-        //self.viewControllers = controllers.map { $0 }
-
+     
 
     }
 

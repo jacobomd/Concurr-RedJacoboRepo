@@ -16,12 +16,10 @@ import Foundation
 // MARK: - Welcome
 struct ListTopicsByCategoryResponse: Codable {
     let users: [User]
- //   let primaryGroups: [JSONAny]
     let topicList: TopicList
     
     enum CodingKeys: String, CodingKey {
         case users
-   //     case primaryGroups = "primary_groups"
         case topicList = "topic_list"
     }
 }
@@ -29,17 +27,13 @@ struct ListTopicsByCategoryResponse: Codable {
 // MARK: - TopicList
 struct TopicList: Codable {
     let canCreateTopic: Bool
-//    let draft: JSONNull?
     let draftKey: String
-//    let draftSequence: JSONNull?
     let perPage: Int
     let topics: [Topic]
     
     enum CodingKeys: String, CodingKey {
         case canCreateTopic = "can_create_topic"
- //       case draft
         case draftKey = "draft_key"
-//        case draftSequence = "draft_sequence"
         case perPage = "per_page"
         case topics
     }
@@ -56,17 +50,14 @@ struct Topic: Codable {
     let bumped: Bool
     let bumpedAt: String?
     let unseen, pinned: Bool
- //   let unpinned: JSONNull?
     let excerpt: String?
     let visible, closed, archived: Bool
-//    let bookmarked, liked: JSONNull?
     let views, likeCount: Int
     let hasSummary: Bool
     let archetype, lastPosterUsername: String?
     let categoryID: Int
     let pinnedGlobally: Bool
-//    let featuredLink: JSONNull?
- //   let posters: [Poster]
+
     
     enum CodingKeys: String, CodingKey {
         case id, title
@@ -80,7 +71,6 @@ struct Topic: Codable {
         case lastPostedAt = "last_posted_at"
         case bumped
         case bumpedAt = "bumped_at"
- //       case unseen, pinned, unpinned, excerpt, visible, closed, archived, bookmarked, liked, views
         case unseen, pinned, excerpt, visible, closed, archived, views
         case likeCount = "like_count"
         case hasSummary = "has_summary"
@@ -88,26 +78,11 @@ struct Topic: Codable {
         case lastPosterUsername = "last_poster_username"
         case categoryID = "category_id"
         case pinnedGlobally = "pinned_globally"
-  //      case featuredLink = "featured_link"
-    //    case posters
+
     }
 }
 
-// MARK: - Poster
-//struct Poster: Codable {
-//    let extras, posterDescription: String
-//    let userID: Int
-//  //  let primaryGroupID: JSONNull?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case extras
-//        case posterDescription = "description"
-//        case userID = "user_id"
-// //       case primaryGroupID = "primary_group_id"
-//    }
-//}
 
-// MARK: - User
 struct User: Codable {
     let id: Int
     let username, name, avatarTemplate: String
